@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 6% 8%;
+    --foreground: 0 0% 92%;
+
+    --card: 240 6% 10%;
+    --card-foreground: 0 0% 92%;
+
+    --popover: 240 6% 10%;
+    --popover-foreground: 0 0% 92%;
+
+    --primary: 150 32% 55%;
+    --primary-foreground: 150 20% 10%;
+
+    --secondary: 240 5% 16%;
+    --secondary-foreground: 0 0% 92%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 240 5% 62%;
+
+    --accent: 240 5% 18%;
+    --accent-foreground: 0 0% 92%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 18%;
+    --input: 240 5% 18%;
+    --ring: 150 32% 55%;
+
+    --radius: 0.65rem;
+
+    --sidebar-background: 240 7% 6%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 150 32% 55%;
+    --sidebar-primary-foreground: 150 20% 10%;
+    --sidebar-accent: 240 5% 14%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 240 5% 15%;
+    --sidebar-ring: 150 32% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* thin scrollbars for the sidebar / lists */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 999px;
+}
